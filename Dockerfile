@@ -10,6 +10,12 @@ RUN docker-php-ext-install pdo pdo_mysql mbstring gd xml
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --prefer-dist --no-scripts --no-progress
+COPY . .
+RUN composer dump-autoload --optimize
+
+
 # Set working directory
 WORKDIR /var/www
 
