@@ -5,6 +5,7 @@ services:
     plan: free
     buildCommand: |
       composer install --optimize-autoloader --no-dev
+      php artisan migrate 
       php artisan key:generate
       php artisan migrate --force
       php artisan config:cache
