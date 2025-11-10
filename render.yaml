@@ -2,12 +2,23 @@ services:
   - type: web
     name: laravel-api
     env: php
+    plan: free
     buildCommand: |
       composer install --optimize-autoloader --no-dev
       php artisan key:generate
       php artisan migrate --force
-      php artisan storage:link
       php artisan config:cache
-      php artisan route:cache
-      php artisan view:cache
-    startCommand: php artisan serve --host=0.0.0.0 --port=$PORT
+    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DB_CONNECTION
+        value: pgsql
+      - key: DB_HOST
+        value: dpg-d48tribuibrs739hou40-a.render.com
+      - key: DB_PORT
+        value: 5432
+      - key: DB_DATABASE
+        value: lawfirm_backend_db
+      - key: DB_USERNAME
+        value: admin
+      - key: DB_PASSWORD
+        value: J84PZ4wnvF1GEtlMCVw9ZSoHrpMkC9zz
