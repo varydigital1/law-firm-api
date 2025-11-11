@@ -16,12 +16,12 @@ services:
       - key: DB_CONNECTION
         value: pgsql
       - key: DB_HOST
-        value: dpg-d48tribuibrs739hou40-a.render.com
+        value: dpg-d495b2f5r7bs738v8t60-a.render.com
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
         value: lawfirm_backend_db
       - key: DB_USERNAME
-        value: admin
+        value: root
       - key: DB_PASSWORD
-        value: J84PZ4wnvF1GEtlMCVw9ZSoHrpMkC9zz
+        value: xEYuxPeETFAISUmTxeP9XRHca5koIyFW
