@@ -25,7 +25,7 @@ services:
       - key: DB_PORT
         value: 5432
       - key: DB_DATABASE
-        value: lawfirm_backend_db
+        value: lawfirm_backend_db_zlc0
       - key: DB_USERNAME
         value: root
       - key: DB_PASSWORD
