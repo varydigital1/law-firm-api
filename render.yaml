@@ -4,7 +4,8 @@ services:
     env: php
     plan: free
     buildCommand: |
-      apt-get update && apt-get install -y php-pgsql
+
+      apt-get update && apt-get install -y php-pgsql && composer install --no-dev
       composer install --optimize-autoloader --no-dev
       php artisan migrate 
       php artisan key:generate
